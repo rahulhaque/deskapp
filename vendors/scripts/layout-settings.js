@@ -203,27 +203,5 @@
 			clearOptions();
 			location.reload();
 		});
-
-		jQuery(".welcome-modal-btn").click(function () {
-			"use strict";
-			jQuery(this).addClass("active");
-			jQuery(".welcome-modal").show();
-			//Store in local storage
-			setOptions("welcomemodal", "show");
-		});
-		if (currentOptions.welcomemodal === "show") {
-			jQuery(".welcome-modal-btn").trigger("click").addClass("active");
-		}
-		jQuery(".welcome-modal-close").click(function () {
-			"use strict";
-			jQuery(".welcome-modal-btn").removeClass("active");
-			jQuery(".welcome-modal").slideToggle();
-			//Store in local storage
-			setOptions("welcomemodal", "hide");
-		});
-		if (currentOptions.welcomemodal === "hide") {
-			jQuery(".welcome-modal-close").trigger("click");
-			jQuery(".welcome-modal-btn").removeClass("active");
-		}
 	});
 })();
